@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicios {
 
-    public void actividad_inicial (){
+    public void actividad0 (){
         System.out.println("¿Cómo te llamas?");
         Scanner entrada = new Scanner(System.in);       //Este comando sirve para habilitar el teclado.
 
@@ -17,14 +17,23 @@ public class Ejercicios {
 
         System.out.println("Hola " + nombre + " bienvenido a " + curso);
 
-        System.out.println("Introduce un número:");
-        int num1 = entrada.nextInt();                   //En este caso .nextInt() se trata de un numero.
+        int num1 = 0;
+        int num2 = 0;
 
-        System.out.println("Introduce otro número:");
-        int num2 = entrada.nextInt();
+        while (num1 == num2){
 
+            System.out.println("Introduce un número:");
+            num1 = entrada.nextInt();                   //En este caso .nextInt() se trata de un numero.
+
+            System.out.println("Introduce otro número:");
+            num2 = entrada.nextInt();
+
+            if (num1 == num2){
+                System.out.println("ERROR. Los numeros son iguales");
+            }
+
+        }
         int resultado = num1 + num2;
-
         System.out.println("El resultado es: " + resultado);
     }
 }
