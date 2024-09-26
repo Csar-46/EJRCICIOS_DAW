@@ -70,6 +70,26 @@ public class Ejercicios {
             System.out.println( num1 + " es mayor que " + num2);
     }
 
+    public void ejercicio3 (){
+        int resultado;
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Introduce un número:");
+        int num1 = entrada.nextInt();
+
+        System.out.println("Introduce el divisor:");
+        int num2 = entrada.nextInt();
+
+        if (num2 == 0) {
+            System.out.println("ERROR: No se puede dividir entre 0");
+
+        }else {
+            resultado = num1 / num2;
+            System.out.println(" El resultado es: " + resultado);
+
+        }
+    }
+
 }
 
 

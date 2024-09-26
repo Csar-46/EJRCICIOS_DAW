@@ -1,14 +1,12 @@
 package org.example;
 
+//import java.awt.geom.Arc2D;
 import java.util.Scanner;
 
 
 public class Main {
     public static void main(String[] args) {
-
-        Ejercicios ejercicio2 = new Ejercicios();
-        ejercicio2.ejercicio2();
-
+        Ejercicios ejercicio3 = new Ejercicios();
+        ejercicio3.ejercicio3();
     }
-
-    }
+}
