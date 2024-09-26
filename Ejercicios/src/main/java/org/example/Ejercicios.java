@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicios {
 
-    public void ejercicio0(){
+    public void ejercicio0 () {
         System.out.println("¿Cómo te llamas?");
         Scanner entrada = new Scanner(System.in);       //Este comando sirve para habilitar el teclado.
 
@@ -84,10 +84,35 @@ public class Ejercicios {
             System.out.println("ERROR: No se puede dividir entre 0");
 
         }else {
-            resultado = num1 / num2;
-            System.out.println(" El resultado es: " + resultado);
+            resultado = num1 / num2;                                    //SIEMPRE TIENE QUE ESTAR EL RESULTADO
+            System.out.println(" El resultado es: " + resultado);       //DE LA OPERACIÓN DELANTE
 
         }
+    }
+
+    public void ejercicio4 (){
+
+        Scanner entrada = new Scanner(System.in);
+        int b = 0;
+        int h = 0;
+
+        while (b == 0) {
+
+            System.out.println("Introduce el valor de la base:");
+            b = entrada.nextInt();
+
+        }
+
+        while (h == 0) {
+
+            System.out.println("Introduce el valor de la altura:");
+            h = entrada.nextInt();
+
+        }
+
+        int A = (b*h)/2;
+        System.out.println("El área del triangulo es: " + A);
+
     }
 
 }
