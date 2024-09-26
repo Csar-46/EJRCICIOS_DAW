@@ -36,4 +36,20 @@ public class Ejercicios {
         int resultado = num1 + num2;
         System.out.println("El resultado es: " + resultado);
     }
+    public void ejercicio1 (){
+        System.out.println("Bienvenido! Introduzca un número porfavor: ");
+
+        Scanner entrada = new Scanner(System.in);
+        int num = entrada.nextInt();
+
+        if(num > 0){
+            System.out.println("El número es positivo.");
+        } else if (num < 0) {
+            System.out.println("El número es negativo.");
+        }else
+            System.out.println("El número es natural.");
+
+    }
 }
+
+
