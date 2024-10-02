@@ -6,45 +6,64 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        int multiplicando = 0;
+        int multiplicador = 0;
 
+        boolean error = true;
+        boolean error2 = true;
 
-        int edad = 0;
-        final int edad_voto = 18;
-        boolean  error = true;
-
-        System.out.println();
-        System.out.println("¿Cómo te llamas?");
         Scanner entrada = new Scanner(System.in);
 
-        String nombre = entrada.next();
-        System.out.println("Hola " + nombre + ". Introduce tu edad:");
+        System.out.println("Introduce un multiplicando de 3 cifras:");
 
-        while (error == true){
+        while (error == true) { //Controlamos que el valor del multiplicador sea numerico
             try {
 
-                edad = entrada.nextInt();
+                multiplicando = entrada.nextInt();
+                while (multiplicando <= 0) { //Controlamos que el multiplicando no sea ni negativo ni 0
+                    System.out.println("ERROR. Introduce un multiplicando válido:");
+                    multiplicando = entrada.nextInt();
+
+                }
                 error = false;
 
             } catch (InputMismatchException er) {
 
-                System.out.println("ERROR. Introduce un dato válido:");
+                System.out.println("ERROR. Introduce un valor numérico:");
                 entrada.nextLine();
 
             }
         }
 
-        while (edad<0){
-            System.out.println("Introduce de nuevo tu edad:");
-            edad = entrada.nextInt();
+        System.out.println("Introduce un multiplicador de 3 cifras:");
+
+        while (error2 == true) { //Controlamos que el valor del multiplicando sea numerico
+            try {
+
+                multiplicador = entrada.nextInt();
+                while (multiplicador <= 0) { //Controlamos que el multiplicador no sea ni negativo ni 0
+                    System.out.println("ERROR. Introduce un multiplicador válido:");
+                    multiplicador = entrada.nextInt();
+
+                }
+                error2 = false;
+
+            } catch (InputMismatchException er) {
+
+                System.out.println("ERROR. Introduce un valor numérico:");
+                entrada.nextLine();
+
+            }
         }
 
-        if (edad < edad_voto) {
+        String multiplicandotxt = Integer.toString(multiplicando); //Con este comando estamos cambiando el caracater numerico de
+        String multiplicandotxt_1 = multiplicandotxt.substring(0,1);// la variable multiplicando a texto.
+        String multiplicandotxt_2 = multiplicandotxt.substring(1,2);
+        String multiplicandotxt_3 = multiplicandotxt.substring(2,3);
 
-            System.out.println("Lo siento " + nombre + ". No puedes votar.");
-            System.out.println("Te faltan " + (edad_voto - edad) + " años para ser mayor de edad.");
-
-        } else
-            System.out.println("Enhorabuena " + nombre + ". Puedes votar.");
-
+        String multiplocadortxt = Integer.toString(multiplicador);
+        String multiplicadortxt_1 = multiplicandotxt.substring(0,1);
+        String multiplicadortxt_2 = multiplicandotxt.substring(1,2);
+        String multiplicadortxt_3 = multiplicandotxt.substring(2,3);
     }
 }
