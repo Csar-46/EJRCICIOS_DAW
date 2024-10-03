@@ -56,14 +56,31 @@ public class Main {
             }
         }
 
-        String multiplicandotxt = Integer.toString(multiplicando); //Con este comando estamos cambiando el caracater numerico de
-        String multiplicandotxt_1 = multiplicandotxt.substring(0,1);// la variable multiplicando a texto.
+        String multiplicandotxt = Integer.toString(multiplicando);      /*Con este comando estamos cambiando el caracater numerico de la variable multiplicando a texto.*/
+        String multiplicandotxt_1 = multiplicandotxt.substring(0,1);
         String multiplicandotxt_2 = multiplicandotxt.substring(1,2);
         String multiplicandotxt_3 = multiplicandotxt.substring(2,3);
 
-        String multiplocadortxt = Integer.toString(multiplicador);
-        String multiplicadortxt_1 = multiplicandotxt.substring(0,1);
-        String multiplicadortxt_2 = multiplicandotxt.substring(1,2);
-        String multiplicadortxt_3 = multiplicandotxt.substring(2,3);
+        int multiplicando_1 = Integer.parseInt(multiplicandotxt_1);    /*Con este comando estamos cambiando el caracater de texto de la variable multiplicando a numero.*/
+        int multiplicando_2 = Integer.parseInt(multiplicandotxt_2);
+        int multiplicando_3 = Integer.parseInt(multiplicandotxt_3);
+
+        String multiplicadortxt = Integer.toString(multiplicador);
+        String multiplicadortxt_1 = multiplicadortxt.substring(0,1);
+        String multiplicadortxt_2 = multiplicadortxt.substring(1,2);
+        String multiplicadortxt_3 = multiplicadortxt.substring(2,3);
+
+        int multiplicador_1 = Integer.parseInt(multiplicadortxt_1);
+        int multiplicador_2 = Integer.parseInt(multiplicadortxt_2);
+        int multiplicador_3 = Integer.parseInt(multiplicadortxt_3);
+
+        System.out.println("La primera cifra es " + multiplicando_1);
+        System.out.println("La primera cifra es " + multiplicando_2);
+        System.out.println("La primera cifra es " + multiplicando_3);
+
+        System.out.println("La primera cifra es " + multiplicador_1);
+        System.out.println("La primera cifra es " + multiplicador_2);
+        System.out.println("La primera cifra es " + multiplicador_3);
+
     }
 }
