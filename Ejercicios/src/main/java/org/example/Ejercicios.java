@@ -154,6 +154,97 @@ public class Ejercicios {
             System.out.println("Enhorabuena " + nombre + ". Puedes votar.");
     }
 
+    public void practica4 () {
+        int multiplicando = 0;
+        int multiplicador = 0;
+
+        boolean error = true;
+        boolean error2 = true;
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Introduce un multiplicando de 3 cifras:");
+
+        while (error == true) { //Controlamos que el valor del multiplicador sea numerico
+            try {
+
+                multiplicando = entrada.nextInt();
+                while (multiplicando <= 0) { //Controlamos que el multiplicando no sea ni negativo ni 0
+                    System.out.println("ERROR. Introduce un multiplicando válido:");
+                    multiplicando = entrada.nextInt();
+                }
+
+                error = false;
+
+            } catch (InputMismatchException er) {
+
+                System.out.println("ERROR. Introduce un valor numérico:");
+                entrada.nextLine();
+
+            }
+        }
+
+        while (multiplicando < 100  || multiplicando > 999 ) {
+            System.out.println("ERROR. Introduce un multiplicando de 3 dígitos:");
+            multiplicando = entrada.nextInt();
+        }
+
+
+        System.out.println("Introduce un multiplicador de 3 cifras:");
+
+        while (error2 == true) { //Controlamos que el valor del multiplicando sea numerico
+            try {
+
+                multiplicador = entrada.nextInt();
+                while (multiplicador <= 0) { //Controlamos que el multiplicador no sea ni negativo ni 0
+                    System.out.println("ERROR. Introduce un multiplicador válido:");
+                    multiplicador = entrada.nextInt();
+                }
+
+                error2 = false;
+
+            } catch (InputMismatchException er) {
+
+                System.out.println("ERROR. Introduce un valor numérico:");
+                entrada.nextLine();
+
+            }
+        }
+
+        while (multiplicador < 100  || multiplicador > 999 ) {
+            System.out.println("ERROR. Introduce un multiplicador de 3 dígitos:");
+            multiplicador = entrada.nextInt();
+        }
+
+        String multiplicadortxt = Integer.toString(multiplicador);
+        String multiplicadortxt_1 = multiplicadortxt.substring(0,1);
+        String multiplicadortxt_2 = multiplicadortxt.substring(1,2);
+        String multiplicadortxt_3 = multiplicadortxt.substring(2,3);
+
+        int multiplicador_1 = Integer.parseInt(multiplicadortxt_1);
+        int multiplicador_2 = Integer.parseInt(multiplicadortxt_2);
+        int multiplicador_3 = Integer.parseInt(multiplicadortxt_3);
+
+        int resultado1 = multiplicando * multiplicador_1;
+        int resultado2 = multiplicando * multiplicador_2;
+        int resultado3 = multiplicando * multiplicador_3;
+        int resultado = multiplicando * multiplicador;
+
+        System.out.println("Mucchas gracias. A continuación se postrara la multiplicacion por pantalla:");
+
+        System.out.println("    " + multiplicando);
+        System.out.println("x   " + multiplicando);
+        System.out.println("-----------");
+
+        System.out.println("    " + resultado1);
+        System.out.println("   " + resultado2 + "x ");
+        System.out.println("  " + resultado3 + "xx");
+        System.out.println("-----------");
+
+
+        System.out.println("  " + resultado);
+    }
+
 }
 
 
