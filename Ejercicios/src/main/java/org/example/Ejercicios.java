@@ -233,7 +233,7 @@ public class Ejercicios {
         System.out.println("Mucchas gracias, la multiplicacion se mostrará por pantalla:");
 
         System.out.println("        " + multiplicando);
-        System.out.println("x       " + multiplicando);
+        System.out.println("x       " + multiplicador);
         System.out.println("--------------------");
 
         System.out.println("        " + resultado1);
