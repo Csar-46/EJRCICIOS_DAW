@@ -230,19 +230,19 @@ public class Ejercicios {
         int resultado3 = multiplicando * multiplicador_3;
         int resultado = multiplicando * multiplicador;
 
-        System.out.println("Mucchas gracias. A continuación se postrara la multiplicacion por pantalla:");
+        System.out.println("Mucchas gracias, la multiplicacion se mostrará por pantalla:");
 
-        System.out.println("    " + multiplicando);
-        System.out.println("x   " + multiplicando);
-        System.out.println("-----------");
+        System.out.println("        " + multiplicando);
+        System.out.println("x       " + multiplicando);
+        System.out.println("--------------------");
 
-        System.out.println("    " + resultado1);
-        System.out.println("   " + resultado2 + "x ");
-        System.out.println("  " + resultado3 + "xx");
-        System.out.println("-----------");
+        System.out.println("        " + resultado1);
+        System.out.println("       " + resultado2 + "x ");
+        System.out.println("      " + resultado3 + "xx ");
+        System.out.println("--------------------");
 
 
-        System.out.println("  " + resultado);
+        System.out.println("      " + resultado);
     }
 
 }
